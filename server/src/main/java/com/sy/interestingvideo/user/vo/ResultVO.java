@@ -3,8 +3,6 @@ package com.sy.interestingvideo.user.vo;
 
 import lombok.Data;
 
-import java.io.Serializable;
-
 @Data
 public class ResultVO<T> {
 
