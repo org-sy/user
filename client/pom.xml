@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.sy.interestingvideo</groupId>
+        <artifactId>user</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <artifactId>user-client</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>user-client</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.sy.interestingvideo</groupId>
+            <artifactId>user-common</artifactId>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <!-- 注意: 因为我们不需要demo-parent是一个可运行的项目，所以修改原来的打包方式为maven打包方式 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

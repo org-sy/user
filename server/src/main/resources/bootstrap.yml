@@ -1,0 +1,16 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://47.101.168.240:8761/eureka
+server:
+  port: 8083
+spring:
+  application:
+    name: user
+  cloud:
+    config:
+      profile: test
+      discovery:
+        enabled: true
+        service-id: CONFIG
+

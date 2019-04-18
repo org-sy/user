@@ -9,6 +9,8 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
+    <packaging>pom</packaging>
+
     <groupId>com.sy.interestingvideo</groupId>
     <artifactId>user</artifactId>
     <version>0.0.1-SNAPSHOT</version>
@@ -26,6 +28,8 @@
         <common.version>0.0.1-SNAPSHOT</common.version>
     </properties>
 
+
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -37,7 +41,7 @@
             </dependency>
             <dependency>
                 <groupId>com.sy.interestingvideo</groupId>
-                <artifactId>common</artifactId>
+                <artifactId>user-common</artifactId>
                 <version>${common.version}</version>
             </dependency>
         </dependencies>
