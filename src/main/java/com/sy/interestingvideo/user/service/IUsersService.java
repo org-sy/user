@@ -10,5 +10,5 @@ import com.sy.interestingvideo.user.entity.UserInfo;
  */
 public interface IUsersService {
 	
-	UserInfo getUserByUId(Integer uid);
+	UserInfo getUserByUId(Long uid);
 }

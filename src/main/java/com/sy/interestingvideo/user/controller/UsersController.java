@@ -23,7 +23,7 @@ public class UsersController {
 	private UsersService usersService;
 	
 	@GetMapping("/getOne/{uId}")
-	public ResultVO getOneByUId(@PathVariable("uId") Integer uId){
+	public ResultVO getOneByUId(@PathVariable("uId") Long uId){
 		return ResultVOUtil.success(usersService.getUserByUId(uId));
 	}
 }
