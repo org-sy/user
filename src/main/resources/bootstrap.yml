@@ -7,11 +7,9 @@ server:
 spring:
   application:
     name: user
-  servlet:
-    multipart:
-      max-file-size: 10MB
   cloud:
     config:
+      profile: test
       discovery:
         service-id: CONFIG
-      profile: test
+
