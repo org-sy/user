@@ -3,11 +3,9 @@ package com.sy.interestingvideo.user.controller;
 import com.sy.interestingvideo.user.service.impl.UsersService;
 import com.sy.interestingvideo.user.uitls.ResultVOUtil;
 import com.sy.interestingvideo.user.vo.ResultVO;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @description:用户Action
@@ -22,8 +20,9 @@ public class UsersController {
 	@Autowired
 	private UsersService usersService;
 	
-	@GetMapping("/getOne/{uId}")
-	public ResultVO getOneByUId(@PathVariable("uId") Long uId){
+	@GetMapping("/getOne")
+	public ResultVO getOneByUId(@RequestParam("userId") Long uId){
+		System.err.println("uId: " + uId);
 		return ResultVOUtil.success(usersService.getUserByUId(uId));
 	}
 }

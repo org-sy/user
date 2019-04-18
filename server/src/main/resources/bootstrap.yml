@@ -13,4 +13,5 @@ spring:
       discovery:
         enabled: true
         service-id: CONFIG
-
+  jpa:
+    show-sql: true
