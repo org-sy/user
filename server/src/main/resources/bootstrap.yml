@@ -3,7 +3,7 @@ eureka:
     service-url:
       defaultZone: http://47.101.168.240:8761/eureka
 server:
-  port: 8083
+  port: 8081
 spring:
   application:
     name: user
@@ -15,3 +15,8 @@ spring:
         service-id: CONFIG
   jpa:
     show-sql: true
+  rabbitmq:
+    host: 129.211.17.224
+    port: 5672
+    username: guest
+    password: guest

@@ -62,4 +62,7 @@ public class UserInfo implements Serializable, Cloneable {
 	public UserInfo() {
 		super();
 	}
+	
+	
+	
 }
