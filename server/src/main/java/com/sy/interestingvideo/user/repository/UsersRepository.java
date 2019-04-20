@@ -12,4 +12,11 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface UsersRepository extends JpaRepository<UserInfo, Long> {
+
+    /**
+     * qq/微信登录,查询有无有此信息
+     * @param uniqueCode
+     * @return
+     */
+    public UserInfo findUserInfoByUniqueCode(String uniqueCode);
 }

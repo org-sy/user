@@ -22,4 +22,14 @@ public class UsersService implements IUsersService {
 	public UserInfo getUserByUId(Long uid) {
 		return usersRepository.getOne(uid);
 	}
+
+	@Override
+	public UserInfo qqOrwxLogin(String uniqueCode) {
+		return usersRepository.findUserInfoByUniqueCode(uniqueCode);
+	}
+
+	@Override
+	public UserInfo register(UserInfo userInfo) {
+		return usersRepository.save(userInfo);
+	}
 }

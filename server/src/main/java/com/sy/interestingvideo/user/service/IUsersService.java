@@ -11,4 +11,8 @@ import com.sy.interestingvideo.user.entity.UserInfo;
 public interface IUsersService {
 	
 	UserInfo getUserByUId(Long uid);
+
+	UserInfo qqOrwxLogin(String uniqueCode);
+
+	UserInfo register(UserInfo userInfo);
 }
